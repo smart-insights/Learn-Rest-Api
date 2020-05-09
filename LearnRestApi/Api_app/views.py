@@ -6,7 +6,7 @@ from rest_framework.status import HTTP_401_UNAUTHORIZED, HTTP_200_OK, HTTP_404_N
 import requests
 
 # import models
-from .models import AddProduct
+from .models import Products
 
 # import serializers
 from .serializer import ProductSerializer
@@ -17,7 +17,7 @@ from .serializer import ProductSerializer
 @api_view(["GET"])
 def get_products(request):
     try:
-        products = AddProduct.objects.all()
+        products = Products.objects.all()
         items = ProductSerializer(products, many=True)
         return Response(data={"status": "Success", "message": "Products Found", "data": {"user": items.data}},
                         status=HTTP_200_OK)
