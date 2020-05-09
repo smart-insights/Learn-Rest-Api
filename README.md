@@ -3,7 +3,9 @@
 Follow the steps below to run the project with us.
 
 > Step 1 : Clone the project.
+
 > Step 2 : Create a virtual environment to run.
+
 > Step 3 : Install requirements.py to get all the dependencies.
 
 Your project has been setup. Continue watching the video.
